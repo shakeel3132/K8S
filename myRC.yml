@@ -1,0 +1,18 @@
+apiversion: vi
+kind: ReplicationController
+metadata:
+  name: nuxi-rc
+spec: 
+  replicas: 3 
+  selector: 
+     app: nuxiqapp
+  template:
+     matadata:
+       labels:
+           app: nuxiqapp
+     spec:
+        containers:
+         - name: nuxiqapp-container
+           image: ubuntu 20.04
+           port:
+           - containerport: 80

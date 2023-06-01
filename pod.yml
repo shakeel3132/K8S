@@ -1,0 +1,9 @@
+appliction: v1
+kind: pods
+metadata:
+  name: Mind-pod
+spec:
+  - name: minx-container
+    image: nginx
+    port:
+      - cantainerport: 80
